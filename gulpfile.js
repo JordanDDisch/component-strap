@@ -19,7 +19,7 @@ gulp.task('styleguide', ['clean:styleguide'], $.shell.task([
 ], {
     templateData: {
       source:       'scss',
-      destination:  'dist',
+      destination:  'styleguide',
       template:     'template'
     }
   }
@@ -27,11 +27,11 @@ gulp.task('styleguide', ['clean:styleguide'], $.shell.task([
 
 
 // Clean styleguide directory.
-gulp.task('clean:styleguide', del.bind(null, ['dist/*.html', 'public'], {force: true}));
+gulp.task('clean:styleguide', del.bind(null, ['styleguide/*.html', 'public'], {force: true}));
 
 
 gulp.task('clean-css', function () {
-    return gulp.src('dist/css', {read: false})
+    return gulp.src('styleguide/css', {read: false})
         .pipe(clean());
 });
 
@@ -39,7 +39,7 @@ gulp.task('clean-css', function () {
 gulp.task('watch', function() {
     browserSync({
         server: {
-            baseDir: "./dist"
+            baseDir: "./styleguide"
         }
     });
 
@@ -56,7 +56,7 @@ gulp.task('styles', function() {
             cascade: false
         }))
         .pipe(minifyCSS())
-        .pipe(gulp.dest('dist/css')).pipe(reload({stream: true}));
+        .pipe(gulp.dest('styleguide/css')).pipe(reload({stream: true}));
 });
 
 gulp.task('default', function(){
