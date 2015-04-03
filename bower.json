@@ -6,6 +6,7 @@
     "Rob Caracaus <rcaracaus@gmail.com>"
   ],
   "license": "MIT",
+  "main": "styleguide/css/styles.css",
   "ignore": [
     "**/.*",
     "node_modules",
