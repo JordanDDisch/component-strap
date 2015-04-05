@@ -3,3 +3,11 @@
   display: block;
   margin: auto;
 }
+
+.center-block-fixed,
+%center-block-fixed {
+  max-width: 728px;
+  margin: auto;
+  padding-top: 2rem;
+}
+
