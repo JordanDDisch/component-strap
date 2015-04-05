@@ -9,6 +9,12 @@
   @include font-size-line-height(.8rem);
 }
 
+.font--summary,
+%font--summary {
+  @include font-size-line-height(1.2rem);
+  font-weight: 400;
+}
+
 .font--button,
 %font--button {
   @extend %palette-4;
