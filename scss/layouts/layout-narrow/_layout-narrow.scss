@@ -4,13 +4,12 @@
 //
 // Styleguide layouts.layout-narrow
 
-$layout-narrow__width: 728px;
-
-.layout-narrow {
+.layout-narrow,
+%layout-narrow {
   @extend %inset;
   @extend %clearfix;
   position: relative;
-  max-width: 749px;
+  max-width: 800px;
   margin: auto;
   padding-bottom: 1rem;
 }

@@ -15,16 +15,11 @@
   font-weight: 400;
 }
 
-.font--button,
-%font--button {
+.font--label,
+%font--label {
   @extend %palette-4;
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.font--label,
-%font--label {
-  @extend %font--button;
   display: inline-block;
   margin-bottom: 0.3rem;
 }

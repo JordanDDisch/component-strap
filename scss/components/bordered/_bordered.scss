@@ -1,16 +1,16 @@
-.bordered--vertical {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 1rem;
-  padding: .5rem 0;
+// Bordered
+//
+// Markup: bordered.html
+//
+// Styleguide components.bordered
 
-  @include breakpoint($bp-large) {
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-  }
+.bordered--vertical,
+%bordered--vertical {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
-.bordered--bottom {
+.bordered--bottom,
+%bordered--vertical {
   border-bottom: 1px solid #ccc;
 }

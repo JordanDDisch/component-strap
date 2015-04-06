@@ -17,18 +17,10 @@
   height: 120px;
 }
 
-
-.circle-image--x-large,
-%circle-image--x-large {
-  @extend %circle-image;
-  width: 220px;
-  height: 220px;
-}
-
 .circle-image__wrapper,
 %circle-image__wrapper {
   img {
-    @extend %circle-image--x-large;
+    @extend %circle-image;
     @extend %center-block;
   }
 }

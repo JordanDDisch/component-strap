@@ -8,7 +8,7 @@ var gulp             = require('gulp'),
     minifyCSS        = require('gulp-minify-css'),
     include          = require('gulp-include'),
     browserSync      = require('browser-sync'),
-    reload           = browserSync.reload;
+    concat           = require('gulp-concat');
 
 
 
@@ -43,7 +43,11 @@ gulp.task('watch', function() {
         }
     });
 
-    gulp.watch(['scss/**/*.scss', 'scss/**/*.html'], ['styles', 'styleguide']);
+    gulp.watch(['scss/**/*.scss'], ['styles']);
+
+    gulp.watch(['scss/**/*.html'], ['styleguide', browserSync.reload]);
+
+    gulp.watch(['scss/components/**/*.js'], ['scripts', browserSync.reload]);
 
 });
 
@@ -56,11 +60,16 @@ gulp.task('styles', function() {
             cascade: false
         }))
         .pipe(minifyCSS())
-        .pipe(gulp.dest('styleguide/css')).pipe(reload({stream: true}));
+        .pipe(gulp.dest('styleguide/css')).pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('default', function(){
     gulp.start('styleguide', 'styles');
 });
 
+gulp.task('scripts', function() {
+    return gulp.src(['./scss/components/**/*.js'])
+        .pipe(concat('components.js'))
+        .pipe(gulp.dest('./styleguide/js'));
+});
 

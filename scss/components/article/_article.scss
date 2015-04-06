@@ -1,0 +1,21 @@
+// Article
+//
+// Markup: article.html
+//
+// Styleguide components.article
+
+.article__meta,
+%article__meta {
+  @extend %bordered--vertical;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: .5rem 0;
+}
+
+.article__image,
+%article__image {
+  img {
+    width: 100%;
+  }
+}
