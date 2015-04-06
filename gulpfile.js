@@ -36,7 +36,7 @@ gulp.task('clean-css', function () {
 });
 
 // Static server
-gulp.task('watch', function() {
+gulp.task('watch', ['styles', 'scripts', 'styleguide'], function() {
     browserSync({
         server: {
             baseDir: "./styleguide"

@@ -1,0 +1,13 @@
+// Layout Ad
+//
+// Markup: layout-ad.html
+//
+// Styleguide layouts.layout-ad
+
+.layout-ad,
+%layout-ad {
+  @extend %clearfix;
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
