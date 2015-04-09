@@ -1,0 +1,39 @@
+// Detail Page
+//
+// Markup: detail-page.html
+//
+// Styleguide templates.detail-page
+
+$bp-2-column-large: 1024px;
+
+.two-column-grid {
+  @include add-gutter(1/10);
+  @include add-grid(1 1);
+
+  @include breakpoint($bp-2-column-large) {
+    @include add-grid(2 1);
+  }
+}
+
+.two-column-grid__left {
+
+  @include breakpoint($bp-2-column-large) {
+    @include grid-span(1, 1);
+  }
+}
+
+.two-column-grid__right {
+  display: none;
+
+  @include breakpoint($bp-2-column-large) {
+    display: block;
+    @include grid-span(1, 2);
+  }
+}
+
+.column-ad {
+  @extend %spacer__top;
+  background: #cccccc;
+  width: 300px;
+  height: 600px;
+}
