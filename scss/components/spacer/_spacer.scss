@@ -35,7 +35,17 @@
   padding-bottom: 1rem;
 }
 
+.spacer__bottom--medium,
+%spacer__bottom--medium {
+  padding-bottom: 0.8rem;
+}
+
 .spacer__horizontal,
 %spacer__horizontal {
   padding: 0 1rem;
+}
+
+.spacer__left--small,
+%spacer__left--small {
+  padding-left: .2rem;
 }

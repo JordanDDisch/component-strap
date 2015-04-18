@@ -14,3 +14,8 @@
 %bordered--vertical {
   border-bottom: 1px solid #ccc;
 }
+
+.bordered,
+%bordered {
+  border: 2px solid #cccccc;
+}

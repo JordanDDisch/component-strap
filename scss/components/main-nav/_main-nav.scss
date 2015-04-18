@@ -5,6 +5,7 @@
 // Styleguide components.main-nav
 
 @import 'components/list-inline/list-inline';
+@import 'components/social/social';
 
 .main-nav,
 %main-nav {
@@ -43,12 +44,29 @@
   }
 }
 
+.nav__search {
+  float: right;
+  margin-right: .2rem;
+
+  @include breakpoint($bp-large) {
+    margin-right: .5rem;
+    padding-right: .5rem;
+    border-right: 1px solid #cccccc;
+  }
+}
 
 // State for toggling nav
 
 
 .main-nav__list {
   display: none;
+
+  li:nth-child(4) {
+    @include breakpoint(max-width $bp-large){
+      width: 50%;
+      float: left;
+    }
+  }
 
   .main-nav__active & {
     display: block;
@@ -58,5 +76,3 @@
     display: block;
   }
 }
-
-
