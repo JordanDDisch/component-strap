@@ -1,3 +1,14 @@
+CheckNavClass = {
+
+    //Remove, add or check class of an element
+
+    hasClass: function(ele,cls) {return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));},
+
+    addClass: function(ele,cls) {if (!this.hasClass(ele,cls)) ele.className += " "+cls;},
+
+    removeClass: function(ele,cls) {if (this.hasClass(ele,cls)) {var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');ele.className=ele.className.replace(reg,' ');}}
+};
+
 //Hamburger Menu
 var mainNav = document.getElementsByClassName("main-nav")[0];
 var mainNavIcon = document.getElementsByClassName("main-nav__icon")[0];
@@ -13,36 +24,19 @@ var socialSupplemental = document.getElementsByClassName("social__supplemental")
 navSocial.addEventListener('mouseover', function(){
     socialSupplemental.style.display = 'block';
 
-    addClass(navSocial, 'social-hover');
+    CheckNavClass.addClass(navSocial, 'social-hover');
 
     socialSupplemental.addEventListener('mouseover', function() {
         socialSupplemental.style.display = 'block';
-        addClass(navSocial, 'social-hover');
+        CheckNavClass.addClass(navSocial, 'social-hover');
     });
     socialSupplemental.addEventListener('mouseleave', function(){
         socialSupplemental.style.display = 'none';
-        removeClass(navSocial, 'social-hover');
+        CheckNavClass.removeClass(navSocial, 'social-hover');
     });
 });
 
 navSocial.addEventListener('mouseleave', function(){
     socialSupplemental.style.display = 'none';
-    removeClass(navSocial, 'social-hover');
+    CheckNavClass.removeClass(navSocial, 'social-hover');
 });
-
-
-//Remove, add or check class of an element
-function hasClass(ele,cls) {
-    return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
-}
-
-function addClass(ele,cls) {
-    if (!hasClass(ele,cls)) ele.className += " "+cls;
-}
-
-function removeClass(ele,cls) {
-    if (hasClass(ele,cls)) {
-        var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
-        ele.className=ele.className.replace(reg,' ');
-    }
-}
