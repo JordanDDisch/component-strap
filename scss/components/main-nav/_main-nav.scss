@@ -56,6 +56,14 @@
   }
 }
 
+.nav__search--text {
+  display: none;
+
+  @include breakpoint($bp-large) {
+    display: inline-block;
+  }
+}
+
 // State for toggling nav
 
 
