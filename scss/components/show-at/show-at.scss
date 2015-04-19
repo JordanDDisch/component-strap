@@ -2,7 +2,7 @@
 %show-at {
   display: none;
 
-  @include breakpoint(400px) {
+  @include breakpoint(500px) {
     display: inline-block;
   }
 }
