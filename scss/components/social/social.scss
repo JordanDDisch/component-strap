@@ -1,99 +1,73 @@
-.social__item--fb,
-%social__item--fb {
-  path {
-    fill: #3b5998;
-  }
-  @include breakpoint($bp-large) {
-    path {
-      fill: #cccccc;
+// Social
+//
+// Markup: social.html
+//
+// Styleguide components.social
+
+
+.social {
+    display: block;
+    float: right;
+    cursor: pointer;
+    position: relative;
+}
+
+.social__box {
+  display: none;
+
+  @include breakpoint(400px) {
+    .social:hover & {
+      display: block;
+    }
+    @include breakpoint($bp-large) {
+      @extend %bordered;
+      @extend %spacer__horizontal;
+      z-index: 1000;
+      position: absolute;
+      background: white;
+      width: 110px;
+      height: 130px;
+      top: 30px;
+      right: -8px;
     }
   }
 }
 
-.social__item--twitter,
-%social__item--twitter {
+.social__svg,
+%social__svg {
+  padding-left: .2rem;
   path {
-    fill: #4099FF;
-  }
-  @include breakpoint($bp-large) {
-    path {
-      fill: #cccccc;
-    }
+    fill: #cccccc;
   }
 }
 
-.social__item--pinterest,
-%social__item--pinterest {
-  path {
-    fill: #C92228;
-  }
-  @include breakpoint($bp-large) {
-    path {
-      fill: #cccccc;
-    }
-  }
-}
-
-.social-hover,
-%social-hover {
-  .social__item--fb {
+.social__svg--fb,
+%social__svg--fb {
+  @extend %social__svg;
+  .social:hover & {
     path {
       fill: #3b5998;
     }
   }
-  .social__item--twitter {
+}
+
+.social__svg--twitter,
+%social__svg--twitter {
+  @extend %social__svg;
+  .social:hover & {
     path {
       fill: #4099FF;
     }
   }
-  .social__item--pinterest {
+}
+
+.social__svg--pinterest,
+%social__svg--pinterest {
+  @extend %social__svg;
+  .social:hover & {
     path {
       fill: #C92228;
     }
   }
 }
 
-.social__wrapper {
-  display: none;
-
-  @include breakpoint($bp-large) {
-    display: block;
-    float: right;
-    cursor: pointer;
-    position: relative;
-  }
-}
-
-.social__supplemental {
-  display: none;
-
-  @include breakpoint($bp-large) {
-    @extend %bordered;
-    @extend %spacer__horizontal;
-    z-index: 1000;
-    display: none;
-    position: absolute;
-    background: white;
-    width: 110px;
-    height: 130px;
-    top: 35px;
-    right: 2px;
-  }
-}
-
-.social-mobile__background {
-  overflow: hidden;
-  background: white;
-  width: 30px;
-  height: 30px;
-  float: right;
-  margin-left: 0.2rem;
-  border-radius: 15px;
-}
-
-.social-mobile__nav {
-
-  @include breakpoint($bp-large) {
-    display: none;
-  }
-}

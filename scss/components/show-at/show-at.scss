@@ -1,0 +1,8 @@
+.show-at,
+%show-at {
+  display: none;
+
+  @include breakpoint(400px) {
+    display: inline-block;
+  }
+}

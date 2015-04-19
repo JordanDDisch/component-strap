@@ -56,11 +56,7 @@
 }
 
 .nav__search--text {
-  display: none;
-
-  @include breakpoint($bp-large) {
-    display: inline-block;
-  }
+  @extend %show-at;
 }
 
 // State for toggling nav
