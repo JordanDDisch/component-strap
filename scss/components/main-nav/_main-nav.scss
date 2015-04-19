@@ -23,6 +23,7 @@
   @include breakpoint($bp-large) {
 
     @include list-inline;
+    margin: 0;
     float: right;
   }
 }
@@ -43,6 +44,22 @@
   }
 }
 
+.main-nav__search {
+  float: right;
+  margin-right: .25rem;
+
+  @include breakpoint($bp-large) {
+    margin-right: .5rem;
+    padding-right: .5rem;
+    border-right: 1px solid #cccccc;
+  }
+}
+
+.main-nav__search-text {
+  @extend %show-at;
+  @extend %text-underline--hover;
+  padding-left: .25rem;
+}
 
 // State for toggling nav
 

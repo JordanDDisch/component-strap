@@ -1,0 +1,17 @@
+// Text Underline
+//
+// Markup: text-underline.html
+//
+// Styleguide components.text-underline
+
+.text-underline,
+%text-underline {
+  text-decoration: underline;
+}
+
+.text-underline--hover,
+%text-underline--hover {
+  &:hover {
+    @extend %text-underline;
+  }
+}
