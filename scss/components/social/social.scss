@@ -26,9 +26,8 @@
     top: 30px;
     right: -8px;
   }
-
-  @include breakpoint(500px) {
-    .social:hover & {
+  .social:hover & {
+    @include breakpoint(500px) {
       display: block;
     }
   }
