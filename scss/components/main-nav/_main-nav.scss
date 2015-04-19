@@ -46,7 +46,7 @@
 
 .main-nav__search {
   float: right;
-  margin-right: .2rem;
+  margin-right: .25rem;
 
   @include breakpoint($bp-large) {
     margin-right: .5rem;
@@ -57,6 +57,8 @@
 
 .main-nav__search--text {
   @extend %show-at;
+  @extend %text-underline--hover;
+  padding-left: .25rem;
 }
 
 // State for toggling nav
