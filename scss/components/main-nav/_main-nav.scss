@@ -44,7 +44,7 @@
   }
 }
 
-.nav__search {
+.main-nav__search {
   float: right;
   margin-right: .2rem;
 
@@ -55,7 +55,7 @@
   }
 }
 
-.nav__search--text {
+.main-nav__search--text {
   @extend %show-at;
 }
 
@@ -65,13 +65,6 @@
 .main-nav__list {
   display: none;
 
-  li:nth-child(4) {
-    @include breakpoint(max-width $bp-large){
-      width: 50%;
-      float: left;
-    }
-  }
-
   .main-nav__active & {
     display: block;
   }
@@ -80,3 +73,5 @@
     display: block;
   }
 }
+
+
