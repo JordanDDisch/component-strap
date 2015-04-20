@@ -1,0 +1,73 @@
+// Social
+//
+// Markup: social.html
+//
+// Styleguide components.social
+
+
+.social {
+    display: block;
+    float: right;
+    cursor: pointer;
+    position: relative;
+}
+
+.social__box {
+  display: none;
+
+  @include breakpoint($bp-large) {
+    @extend %bordered;
+    @extend %spacer__horizontal;
+    z-index: 1000;
+    position: absolute;
+    background: white;
+    width: 110px;
+    height: 130px;
+    top: 30px;
+    right: -8px;
+  }
+  .social:hover & {
+    @include breakpoint(500px) {
+      display: block;
+    }
+  }
+}
+
+.social__svg,
+%social__svg {
+  padding-left: .2rem;
+  path {
+    fill: #cccccc;
+  }
+}
+
+.social__svg--fb,
+%social__svg--fb {
+  @extend %social__svg;
+  .social:hover & {
+    path {
+      fill: #3b5998;
+    }
+  }
+}
+
+.social__svg--twitter,
+%social__svg--twitter {
+  @extend %social__svg;
+  .social:hover & {
+    path {
+      fill: #4099FF;
+    }
+  }
+}
+
+.social__svg--pinterest,
+%social__svg--pinterest {
+  @extend %social__svg;
+  .social:hover & {
+    path {
+      fill: #C92228;
+    }
+  }
+}
+
