@@ -5,7 +5,7 @@
 // Styleguide components.button
 
 .button {
-  @extend %link-no-underline;
+  @extend %link-no-underline__off-hover;
   @extend %palette-1;
   display: inline-block;
   margin-bottom: 1rem;

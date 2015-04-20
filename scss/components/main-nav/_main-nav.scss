@@ -13,6 +13,10 @@
   @extend %spacer__small;
 }
 
+.main-nav--top-wrapper {
+  overflow: hidden;
+}
+
 .main-nav__list,
 %main-nav__list {
   @extend %list-unstyled;
@@ -28,6 +32,19 @@
   }
 }
 
+.main-nav__sign-up {
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+
+  @include breakpoint(400px) {
+    display: inline-block;
+    font-weight: normal;
+    margin: 0;
+  }
+}
 
 .main-nav__icon,
 %main-nav__icon {
@@ -45,10 +62,11 @@
 }
 
 .main-nav__search {
-  float: right;
+  float: left;
   margin-right: .25rem;
 
-  @include breakpoint($bp-large) {
+  @include breakpoint(400px) {
+    float: right;
     margin-right: .5rem;
     padding-right: .5rem;
     border-right: 1px solid #cccccc;
@@ -56,7 +74,6 @@
 }
 
 .main-nav__search-text {
-  @extend %show-at;
   @extend %text-underline--hover;
   padding-left: .25rem;
 }

@@ -10,6 +10,15 @@
   text-decoration: none;
 
   &:hover {
+    text-decoration: none;
+  }
+}
+
+%link-no-underline__off-hover,
+.link-no-underline__off-hover {
+  text-decoration: none;
+
+  &:hover {
     text-decoration: underline;
   }
 }
@@ -17,6 +26,6 @@
 %link-no-underline__wrapper,
 .link-no-underline__wrapper {
   a {
-    @extend %link-no-underline;
+    @extend %link-no-underline__off-hover;
   }
 }
