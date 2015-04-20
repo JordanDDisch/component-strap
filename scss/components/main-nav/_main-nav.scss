@@ -29,7 +29,8 @@
   }
 }
 
-.main-nav__sign-up {
+.main-nav__sign-up,
+%main-nav__sign-up{
   text-align: center;
   display: block;
   margin: auto;
@@ -59,7 +60,8 @@
   }
 }
 
-.main-nav__search {
+.main-nav__search,
+%main-nav__search {
   float: left;
   margin-right: .25rem;
 
@@ -71,7 +73,8 @@
   }
 }
 
-.main-nav__search-text {
+.main-nav__search-text,
+%main-nav__search-text {
   @extend %text-underline--hover;
   padding-left: .25rem;
 }
@@ -79,7 +82,8 @@
 // State for toggling nav
 
 
-.main-nav__list {
+.main-nav__list,
+%main-nav__list {
   display: none;
 
   .main-nav__active & {
