@@ -11,6 +11,7 @@
   @extend %clearfix;
   @extend %palette-1;
   @extend %spacer__small;
+  clear: both;
 }
 
 .main-nav__list,
@@ -28,6 +29,21 @@
   }
 }
 
+.main-nav__sign-up,
+%main-nav__sign-up{
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+
+  @include breakpoint(400px) {
+    display: inline-block;
+    float: left;
+    font-weight: normal;
+    margin: 0;
+  }
+}
 
 .main-nav__icon,
 %main-nav__icon {
@@ -44,19 +60,21 @@
   }
 }
 
-.main-nav__search {
-  float: right;
+.main-nav__search,
+%main-nav__search {
+  float: left;
   margin-right: .25rem;
 
-  @include breakpoint($bp-large) {
+  @include breakpoint(400px) {
+    float: right;
     margin-right: .5rem;
     padding-right: .5rem;
     border-right: 1px solid #cccccc;
   }
 }
 
-.main-nav__search-text {
-  @extend %show-at;
+.main-nav__search-text,
+%main-nav__search-text {
   @extend %text-underline--hover;
   padding-left: .25rem;
 }
@@ -64,7 +82,8 @@
 // State for toggling nav
 
 
-.main-nav__list {
+.main-nav__list,
+%main-nav__list {
   display: none;
 
   .main-nav__active & {
