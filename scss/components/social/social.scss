@@ -6,14 +6,12 @@
 
 
 .social {
-  width: 60%;
   float: right;
   text-align: right;
   padding-top: .1rem;
   margin-bottom: -.1rem;
 
   @include breakpoint(400px) {
-    width: 135px;
     padding-top: 0;
     margin-bottom: 0;
   }
