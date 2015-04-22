@@ -1,6 +1,6 @@
 a {
   // Remove the gray background color from active links in IE 10.
-  @extend %link-no-underline
+  @extend %link-no-underline__off-hover;
 }
 
 /**
