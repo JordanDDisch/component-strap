@@ -14,7 +14,8 @@
   clear: both;
 }
 
-.main-nav_wrapper {
+.main-nav__wrapper,
+%main-nav__wrapper {
   margin-bottom: -.1rem;
   padding: .25rem .5rem 0;
   overflow: hidden;
