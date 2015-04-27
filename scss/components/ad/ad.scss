@@ -1,0 +1,9 @@
+.ad {
+  overflow: hidden;
+
+  @include breakpoint($bp-2-column-large) {
+    width: 300px;
+    height: auto;
+    padding-top: 2rem;
+  }
+}
