@@ -68,7 +68,7 @@ gulp.task('default', function(){
 });
 
 gulp.task('scripts', function() {
-    return gulp.src(['./scss/components/**/*.js'])
+    return gulp.src(['./bower_components/jquery/dist/jquery.min.js', './scss/components/**/*.js'])
         .pipe(concat('components.js'))
         .pipe(gulp.dest('./styleguide/js'));
 });
